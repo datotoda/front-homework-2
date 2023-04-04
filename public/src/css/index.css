@@ -77,10 +77,6 @@ h4 {
     padding-right: 270px;
 }
 
-.margin-bottom-77 {
-    margin-bottom: 77px;
-}
-
 .row {
     display: flex;
 }
@@ -108,17 +104,6 @@ h4 {
     align-items: start;
 }
 
-.gap-200 {
-    gap: 200px;
-}
-
-.gap-180 {
-    gap: 180px;
-}
-
-.gap-97 {
-    gap: 97px;
-}
 
 .gap-50 {
     gap: 50px;
@@ -163,7 +148,7 @@ h4 {
 }
 
 .btn {
-    height: 51px;
+    min-height: 51px;
     padding: 16px 30px;
     font-weight: 700;
     font-size: 14px;
@@ -171,7 +156,7 @@ h4 {
 }
 
 .btn-large {
-    height: 54px;
+    min-height: 54px;
     padding: 16px 47px;
     font-weight: 700;
     font-size: 16px;
@@ -289,12 +274,27 @@ h4 {
 
 
 
+.tablet {
+    display: none;
+}
+
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
 
 nav a {
     color: #9893A3;
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
+}
+
+#logo-navbar {
+    width: 78px;
 }
 
 
@@ -322,6 +322,9 @@ nav a {
     line-height: 34px;
     color: #9893A3;
 }
+#about > div {
+    gap: 180px;
+}
 
 
 
@@ -329,7 +332,8 @@ nav a {
     margin-bottom: 178px;
 }
 
-#pricing h2 {
+#pricing .row:first-of-type {
+    justify-content: center;
     margin-bottom: 90px;
 }
 
@@ -344,6 +348,7 @@ nav a {
     height: inherit;
     padding: 0px 84px;
     background-color: #2F2E41;
+    gap: 200px;
 }
 
 #banner h3 {
@@ -351,7 +356,6 @@ nav a {
 }
 
 #banner .btn-large {
-    height: 54px;
     padding: 16px 56.5px;
 }
 
@@ -359,10 +363,13 @@ nav a {
     display: flex;
     flex-direction: column;
     height: 560px;
-    min-width: 1440px;
+    width: 100%;
     background: rgba(236, 235, 255, 0.6);
     justify-content: end;
     padding-bottom: 40px;
+}
+.footer-container .small-container {
+    margin-bottom: 77px;
 }
 
 #contact li {
@@ -394,4 +401,186 @@ nav a {
 #copyright {
     color: #9893A3;
     font-size: 12px;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .container,
+    .medium-container,
+    .small-container{
+        padding-left: 40px;
+        padding-right: 40px;
+        width: calc(100% - 80px);
+    }
+
+    .desktop {
+        display: none;
+    }
+    .tablet {
+        display: block;
+    }
+
+    
+    
+    #navbar {
+        margin-top: 40px;
+    }
+
+    #features .row {
+        flex-direction: column;
+    }
+    #features {
+        margin: 55px auto 106px auto ;
+    }
+
+    #partners,
+    #about,
+    #creative-solutions,
+    #profesional-team, 
+    #pricing,
+    #blog {
+        margin-bottom: 140px;
+    }
+
+    #about .row {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    #pricing .row:first-of-type {
+        justify-content: start;
+    }
+    #pricing .row:last-of-type {
+        flex-direction: column;
+        gap: 45px;
+    }
+    #pricing .card {
+        width: 100%;
+    }
+
+    #banner {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    #banner button{
+        word-wrap: none;
+    }
+    #banner div {
+        padding: 0px 63px;
+        gap: 100px;
+    }
+
+
+    .footer-container {
+        height: auto;
+        padding-bottom: 37px;
+        width: 100%;
+    }
+    .footer-container .small-container {
+        margin-bottom: 58;
+        padding-top: 76px;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .container,
+    .medium-container,
+    .small-container{
+        padding-left: 20px;
+        padding-right: 20px;
+        width: calc(100% - 40px);
+    }
+
+    h1 {
+        font-size: 46px;
+        line-height: 50px;
+    }
+    h2 {
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    
+    .tablet {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+
+
+    #navbar {
+        margin-top: 20px;
+    }
+    #features {
+        margin: 40px auto 80px auto ;
+    }
+
+
+    #partners .row {
+        flex-wrap: wrap;
+        gap: 45px;
+        justify-content: center;
+    }
+    
+    #partners,
+    #about,
+    #creative-solutions,
+    #profesional-team, 
+    #pricing,
+    #blog {
+        margin-bottom: 100px;
+    }
+
+    #pricing .row:first-of-type {
+        margin-bottom: 40px;
+    }
+    #pricing .row:last-of-type {
+        gap: 24px;
+    }
+
+    #banner {
+        height: auto;
+    }
+    #banner .row {
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        padding: 70px 0px;
+        height: auto;
+    }
+
+    
+    .footer-container {
+        padding-bottom: 30px;
+    }
+    .footer-container .small-container {
+        margin-bottom: 66px;
+        padding-top: 50px;
+    }
+    .footer-container .small-container > .row:first-of-type {
+        flex-wrap: wrap;
+        row-gap: 60px;
+        column-gap: 100px;
+        padding-right: 30%;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {    
+    .footer-container .small-container > .row:first-of-type {
+        padding-right: 15%;
+    }
+}
+
+@media only screen and (max-width: 400px) {    
+    .footer-container .small-container > .row:first-of-type {
+        padding-right: 0;
+    }
 }
