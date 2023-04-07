@@ -5,6 +5,7 @@
 
 img {
     width: 100%;
+    object-fit: cover;
 }
 
 ul {
@@ -56,6 +57,12 @@ h4 {
     color: #2F2E41;
 }
 
+.body-small {
+    font-size: 16px;
+    line-height: 26px;
+    color: #9893A3;
+}
+
 .container {
     margin: 0 auto;
     width: 1280px;
@@ -103,6 +110,7 @@ h4 {
 .align-start {
     align-items: start;
 }
+
 
 
 .gap-50 {
@@ -405,7 +413,20 @@ nav a {
 
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1460px) {
+    .container,
+    .medium-container,
+    .small-container{
+        padding-left: 60px;
+        padding-right: 60px;
+        width: calc(100% - 120px);
+    }
+    #about > div {
+        gap: 30px;
+    }
+}
+
+@media only screen and (max-width: 1105px) {
     .container,
     .medium-container,
     .small-container{
@@ -448,6 +469,11 @@ nav a {
         gap: 30px;
     }
 
+    #creative-solutions>.column,
+    #profesional-team>.column {
+        gap: 30px;
+    }
+
     #pricing .row:first-of-type {
         justify-content: start;
     }
@@ -458,6 +484,30 @@ nav a {
     #pricing .card {
         width: 100%;
     }
+
+    #blog>.row:first-child {
+        margin-bottom: 90px;
+    }
+    #blog .articles {
+        gap: 45px;
+    }
+    #blog .articles .row {
+        gap: 27px;
+    }
+    #blog .articles .row div{
+        width: 50%;
+    }
+    #blog .articles .row .column h4 {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        color: #2F2E41;
+        margin-bottom: 6px;
+    }
+    #blog .articles .row .column p {
+        margin-bottom: 26px;
+    }
+
 
     #banner {
         padding: 0;
@@ -545,6 +595,21 @@ nav a {
         gap: 24px;
     }
 
+
+    #blog>.row:first-child {
+        margin-bottom: 40px;
+    }
+    #blog .articles {
+        gap: 40px;
+    }
+    #blog .articles .row {
+        flex-direction: column;
+    }
+    #blog .articles .row div{
+        width: 100%;
+    }
+
+
     #banner {
         height: auto;
     }
@@ -555,7 +620,10 @@ nav a {
         padding: 70px 0px;
         height: auto;
     }
-
+    #banner .row h3 {
+        width: 80%;
+        text-align: center;
+    }
     
     .footer-container {
         padding-bottom: 30px;
